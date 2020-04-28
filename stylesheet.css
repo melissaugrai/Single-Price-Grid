@@ -1,0 +1,71 @@
+/*------Base style------*/
+
+body {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: 260px;
+}
+
+.card-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/*------Top Card style------*/
+
+.top-card {
+    grid-column: 2 / 15;
+}
+
+
+
+/*------Bottom Card style------*/
+.middle-card {
+    grid-column: 2 / 8;
+}
+
+
+.third-card {
+    grid-column: 2 / 15;
+    grid-row: 3 / 4 
+}
+
+
+@media (min-width: 640px) {
+.third-card {    
+    grid-column: 9 / 15;
+    grid-row: 2 / 3;
+    }
+}
+
+/*------Footer style------*/
+
+footer {
+    grid-column: 2 / 15;
+    grid-row: 4 /5;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+@media (min-width: 640px) {
+footer {
+    grid-row: 3 / 4;
+    grid-column: 2 / 15;
+}
+}
+
+<style>.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+</style>
