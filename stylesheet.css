@@ -1,4 +1,10 @@
 /*------Base style------*/
+html {
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+}
 
 body {
     display: grid;
@@ -6,8 +12,8 @@ body {
     grid-template-rows: 270px;
     font-family: 'Karla', sans-serif;
     font-size: 16px;
-    color: #ffff;        
-    
+    color: #ffff;
+
 }
 
 .card-items {
@@ -18,20 +24,30 @@ body {
 }
 
 @media (min-width: 640px) {
-    margin: 0 40px;
+
+    body {
+        grid-template-rows: 217px auto;
+        width: 640px;
+    }
+
+    .card-items {
+        margin: 0 40px;
+    }
 }
 
 /*------Top Card style------*/
 
 .top-card {
     grid-column: 1 / -1;
-    background-color:#ffffff;
+    background-color: #ffffff;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
 }
 
 
 .top-card h3 {
     color: #2bb3b1;
-    margin-top: 35px;
+    margin-top: 30px;
     margin-bottom: 0px
 }
 
@@ -44,49 +60,148 @@ body {
 
 .top-card p {
     color: grey;
-    margin: 30px 0 40px 0;
+    margin: 30px 0;
+    line-height: 1.3em;
 }
 
-/*------Bottom Card style------*/
+@media (min-width: 640px) {
+    .top-card {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+
+    .top-card h3 {
+        font-size: 1.3em;
+        margin: 40px 0 30px 0;
+    }
+
+    .top-card h4 {
+        margin: 0 0 20px 0;
+        font-size: 1.1em;
+    }
+
+    .top-card p {
+        margin: 0 0 45px 0;
+    }
+
+}
 
 
 /*------Middle Card style------*/
 .middle-card {
     grid-column: 1 / -1;
     background-color: #2bb3b1;
+}
 
+.middle-card h3 {
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+.middle-card span {
+    font-size: 30px;
+    font-weight: 700;
+    padding-right: 10px;
+}
+
+.middle-card h4 {
+    font-weight: lighter;
+    margin: 0;
+
+}
+
+.middle-card p {
+    margin: 15px 0 30px 0;
+}
+
+
+.middle-card button {
+    color: #fff;
+    background-color: #bfdf32;
+    border-radius: 5px;
+    height: 50px;
+    font-weight: 700;
+    box-shadow: 1px 1px 5px black;
+    border: none;
+    margin-bottom: 25px;
 }
 
 .middle-card button {
-    background: hsl(71, 73%, 54%);
+    transition-duration: 0.4s;
 }
 
-
-
-
-/*------Third Card style------*/
-.third-card {
-    grid-column: 1 / -1;
-    grid-row: 3 / 4; 
-    background-color: #4abebd;
-    height: 230px;
+.middle-card button:hover {
+    background-color: #4CAF50;
+    color: white;
 }
-
 
 @media (min-width: 640px) {
     .middle-card {
         grid-column: 1 /9;
         grid-row: 2 / 3;
+        border-bottom-left-radius: 5px;
     }
-    
-.third-card {    
-    grid-column: 9 / -1;
-    grid-row: 2 / 3;
+
+    .middle-card h3 {
+        margin: 40px 0 25px 0;
+    }
+
+    .middle-card {}
+
+    .middle-card button {
+        margin: 0 0 40px 0;
+    }
+
+    .middle-card button {
+        transition-duration: 0.4s;
+    }
+
+    .middle-card button:hover {
+        background-color: #4CAF50;
+        color: white;
     }
 }
 
+/*------Third Card style------*/
+
+.third-card {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+    background-color: #4abebd;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.third-card h3 {
+    margin: 25px 0 0 0;
+}
+
+
 .third-card ul {
     list-style-type: none;
+    padding: 0;
+    line-height: 1.2em;
+    margin: 20px 0 30px 0;
+}
+
+
+
+@media (min-width: 640px) {
+
+    .third-card {
+        grid-column: 9 / -1;
+        grid-row: 2 / 3;
+        border-bottom-left-radius: 0;
+    }
+
+    .third-card h3 {
+        margin: 40px 0 25px 0;
+    }
+
+    .third-card ul {
+        margin: 0 0 40px 0;
+        line-height: 1.3em;
+    }
 }
 
 
@@ -98,16 +213,17 @@ footer {
     grid-row: 4 /5;
     display: flex;
     justify-content: center;
+    color: black;
 }
 
 @media (min-width: 640px) {
-footer {
-    grid-row: 3 / 4;
-    grid-column: 2 / 16;
-}
+    footer {
+        grid-row: 3 / 4;
+        grid-column: 2 / 16;
+    }
 }
 
-<style>.attribution {
+.attribution {
     font-size: 11px;
     text-align: center;
 }
@@ -115,4 +231,3 @@ footer {
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
-</style>
