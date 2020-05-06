@@ -13,7 +13,10 @@ body {
     font-family: 'Karla', sans-serif;
     font-size: 16px;
     color: #ffff;
+    padding-top: 70px;
+    background-color: hsl(204, 43%, 93%);
 
+    margin: 0 30px;
 }
 
 .card-items {
@@ -28,6 +31,7 @@ body {
     body {
         grid-template-rows: 217px auto;
         width: 640px;
+        padding-top: 160px;
     }
 
     .card-items {
@@ -121,7 +125,7 @@ body {
     border-radius: 5px;
     height: 50px;
     font-weight: 700;
-    box-shadow: 1px 1px 5px black;
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.2);
     border: none;
     margin-bottom: 25px;
 }
@@ -133,6 +137,7 @@ body {
 .middle-card button:hover {
     background-color: #4CAF50;
     color: white;
+    cursor: pointer;
 }
 
 @media (min-width: 640px) {
@@ -146,9 +151,7 @@ body {
         margin: 40px 0 25px 0;
     }
 
-    .middle-card {}
-
-    .middle-card button {
+      .middle-card button {
         margin: 0 0 40px 0;
     }
 
@@ -159,6 +162,7 @@ body {
     .middle-card button:hover {
         background-color: #4CAF50;
         color: white;
+        cursor: pointer;
     }
 }
 
